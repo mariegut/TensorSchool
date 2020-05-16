@@ -1,0 +1,13 @@
+{
+  "name": "tensorschool",
+  "version": "20.05.14",
+  "description": "Tensor School",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

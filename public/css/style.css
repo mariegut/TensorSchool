@@ -1,0 +1,88 @@
+body {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 900px;
+    width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    margin: 40px 0;
+}
+
+header .title img {
+    height: 30px;
+}
+
+header .title span {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+header .title span::after {
+    content: "";
+    display: block;
+    border-top: 3px solid #000000;
+    width: 100px;
+    margin: 20px auto 40px auto;
+}
+
+.person {
+    position: relative;
+    width: 30%;
+    display: inline-block;
+    left: auto;
+    top: auto;
+}
+
+.person img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.person span {
+    font-size: 0.8em;
+    color: darkgray;
+}
+
+.person:hover {
+    box-shadow: 0 7px 5px #777;
+}
+
+main .card {
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    box-shadow: 1px 3px 3px #777;
+    text-align: left;
+    border-radius: 2%;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+
+}
+
+main .card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    position: relative;
+    right: -240px;
+    top: -80px;
+}
+
+main .card span {
+    font-size: 0.8em;
+    color: darkgray;
+}
+
+main .card .name {
+    font-size: 1.5em;
+}
+
+main .card .info {
+    color: #000;
+    font-size: 1em;
+}
