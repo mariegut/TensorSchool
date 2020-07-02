@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    outline: none;
+}
+
+body {
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Блок wraper */
+.wraper {
+    min-width: 320px;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+}
+
+/* Блок card */
+.card {
+    display: flex;
+    align-items: center;
+}
+
+.card__title, .card__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.card__title {
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.card__description {
+    font-size: 0.8em;
+}
+
+.card__img {
+    object-fit: cover;
+}
+
+.card__img_round {
+    border-radius: 50%;
+}
+
+
+/* Модификатор person блока card */
+
+.card_person {
+    font-size: 20px;
+    flex-direction: column;
+    padding: 8px;
+    padding-bottom: 28px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.card_person:hover {
+    position: relative;
+}
+
+.card_person:hover:after {
+    content: '';
+    box-shadow: 0px 6px 5px 0px rgba(50, 50, 50, 0.40);
+    display: block;
+    width: 100%;
+    height: calc(100% - 100px);
+    position: absolute;
+    bottom: 8px;
+    z-index: -1;
+}
+
+.card_person .card__description {
+    color: #cfcfcf;
+}
+
+.card_person .card__img {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* Модификатор header блока card */
+.card_header {
+   font-size: 40px;
+   margin: 18px auto;
+   height: auto;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: baseline;
+}
+.card_header .card__img {
+    height: 0.8em;
+    margin: 0px 8px;
+}
+
+.card_header .card__title {
+    text-transform: uppercase;
+    width: auto;
+    cursor: default;
+}
+
+.card_header .card__description {
+    font-size: 0.5em;
+    color: #000;
+    margin-bottom: 32px;
+    white-space: normal;
+}
+
+.card_header .card__description:before {
+    content: '';
+    width: 50%;
+    max-width: 150px;
+    border-top: 3px solid #000;
+    display: block;
+    margin: 8px auto;
+    margin-bottom: 48px;
+}
+
+
+/* popup */
+
+.popup-stack {
+    overflow: hidden;
+}
+
+.popup {
+    min-width: 100px;
+    max-width: 100%;
+    height: auto;
+    padding: 8px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.40);
+    border-radius: 6px;
+    position: absolute;
+    left: -10000px;
+    top: -10000px;
+    z-index: 100;
+}
+
+.popup__header {
+    display: flex;
+    flex-direction: row;
+    line-height: 30px;
+    height: 40px;
+}
+
+.popup__title {
+    flex-grow: 1;
+    color: #cfcfcf;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 10px;
+}
+
+.popup__closeButton {
+    width: 24px;
+    height: 24px;
+    padding: 3px 0px;
+    margin-left: 8px;
+    align-self: baseline;
+    cursor: pointer;
+}
+
+/* profile-mini */
+.profile-mini {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) 176px;
+    grid-template-rows: 50px 1fr 40px;
+    width: inherit;
+}
+
+.profile-mini__photo {
+    justify-self: end;
+    grid-row: span 3 / auto;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.profile-mini__title, 
+.profile-mini__value {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profile-mini__title_big {
+    font-weight: 100;
+    font-size: 32px;
+}
+
+.profile-mini__params {
+    display: grid;
+    grid-template-columns: minmax(50px, max-content) minmax(50px, 1fr);
+}
+
+.profile-mini__params .profile-mini__title {
+    color: #cfcfcf;
+    margin-right: 16px;
+}
+
+.profile-mini__futter {
+    display: grid;
+    grid-template-columns: 40px minmax(100px, 1fr);
+    align-items: center;
+}
+
+/* profile-message-bottom */
+.profile-message-bottom {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* persons-mini-list */
+.persons-mini-list {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.persons-mini-list__link {
+    margin-right: 8px;
+    text-decoration: none;
+    color: rgb(15, 133, 200);
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.persons-mini-list__ava {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: -16px;
+    position: relative;
+    cursor: pointer;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.persons-mini-list__ava:hover {
+    z-index: 1;
+}
+
+/* Альбомный режим смартфонов и узкие экраны */
+@media screen and (max-width:650px) {
+    .persons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Портретный режим смартфонов */
+@media screen and (max-width:479px) {
+    .card_person {
+        display: grid;
+        grid-template-columns: 116px 1fr;
+        width: 80%;
+    }
+    .card_person .card__img {
+        width: 100px;
+        height: 100px;
+        grid-row: span 2 / auto;
+    }
+
+    .card_person .card__title,
+    .card_person .card__description {
+        text-align: left;
+    }
+
+    .card_person .card__title {
+        align-self: end;
+    }
+
+    .card_person .card__description {
+        align-self: start;
+    }
+
+    .card_person:hover:after {
+        display: none;
+    }
+
+    .popup {
+        width: auto;
+        margin:0px;
+    }
+}
